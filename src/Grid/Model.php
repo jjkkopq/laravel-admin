@@ -630,7 +630,7 @@ class Model
 
             return [
                 $relatedTable,
-                $relation->{$foreignKeyMethod}(),
+                $this->getTable().'.'.$relation->{$foreignKeyMethod}(),
                 '=',
                 $relatedTable.'.'.$relation->getRelated()->getKeyName(),
             ];
